@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo de Magos - Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="1900" height="1000"></canvas>
+        <div id="spell-buttons">
+            <button class="spell-button" data-spell="fireball">Bola de Fogo</button>
+            <button class="spell-button" data-spell="lightning">Zap</button>
+            <button class="spell-button" data-spell="poison">Veneno</button>
+            <button class="spell-button" data-spell="heal">Cura Divina</button>
+        </div>
+        <div id="log">
+            <h3>Log de Ações:</h3>
+            <ul id="log-messages"></ul>
+        </div>
+    </div>
+    <div id="game-over" class="hidden">
+        <h1 id="game-over-message"></h1>
+        <p id="game-over-submessage"></p>
+        <button onclick="game.resetGame()">Jogar Novamente</button>
+    </div>
+    <script src="game.js"></script>
+    <script src="script.css"></script>
+</body>
+</html>
